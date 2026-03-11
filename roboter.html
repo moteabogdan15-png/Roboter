@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roboter der Zukunft</title>
+    <style>
+        /* COOL DESIGN - FARBEN & STIL */
+        :root {
+            --neon-blue: #00f2ff;
+            --deep-space: #0a0a12;
+            --silver: #e0e0e0;
+            --warning-red: #ff4d4d;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--deep-space);
+            color: var(--silver);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* 1. TITELBEREICH */
+        header {
+            background: linear-gradient(rgba(10, 10, 18, 0.7), rgba(10, 10, 18, 0.7)), 
+                        url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=1000');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-bottom: 4px solid var(--neon-blue);
+        }
+
+        h1 { font-size: 3.5rem; color: var(--neon-blue); text-shadow: 0 0 20px var(--neon-blue); margin: 0; }
+        header p { font-size: 1.5rem; margin-top: 10px; }
+
+        .container { max-width: 900px; margin: auto; padding: 40px 20px; }
+
+        /* SEKTIONEN DESIGN */
+        section { 
+            background: rgba(255, 255, 255, 0.05); 
+            padding: 30px; 
+            border-radius: 15px; 
+            margin-bottom: 30px; 
+            border-left: 5px solid var(--neon-blue);
+        }
+
+        h2 { color: var(--neon-blue); font-size: 1.8rem; }
+
+        /* 3. ROBOTER KARTEN */
+        .robot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .robot-card { background: #1a1a2e; border-radius: 10px; overflow: hidden; }
+        .robot-card img { width: 100%; height: 200px; object-fit: cover; }
+        .robot-info { padding: 15px; }
+
+        /* 5. PRO & CONTRA TABELLE */
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; background: #161625; }
+        th, td { padding: 15px; border: 1px solid #333; text-align: left; }
+        th { background: var(--neon-blue); color: var(--deep-space); }
+        .pro { color: #00ff88; }
+        .contra { color: var(--warning-red); }
+
+        /* 6. QUELLEN */
+        .sources a { color: var(--neon-blue); text-decoration: none; }
+        .sources a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🤖 ROBOTER-WELT ⚡</h1>
+    <p>Die mechanischen Helfer unserer Zeit</p>
+</header>
+
+<div class="container">
+
+    <section>
+        <h2>❓ Was ist das?</h2>
+        <p>In diesem Bereich erforschen wir die Welt der Robotik, also Maschinen, die Aufgaben automatisch ausführen. Roboter sind heute nicht mehr nur in Fabriken zu finden, sondern unterstützen uns auch im Haushalt und in der Medizin. Sie nutzen Sensoren und Computerchips, um ihre Umgebung wahrzunehmen und darauf zu reagieren.</p>
+    </section>
+
+    <section>
+        <h2>🦾 Diese Roboter gibt es</h2>
+        <div class="robot-grid">
+            <div class="robot-card">
+                <img src="https://images.unsplash.com/photo-1546776310-eef45dd6d63c?auto=format&fit=crop&q=80&w=500" alt="Roboter">
+                <div class="robot-info">
+                    <h3>Spot (Boston Dynamics)</h3>
+                    <p>Ein vierbeiniger Roboterhund, der Treppen steigen kann und in gefährlichen Gebieten oder auf Baustellen zur Inspektion eingesetzt wird.</p>
+                </div>
+            </div>
+            <div class="robot-card">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=500" alt="Industrieroboter">
+                <div class="robot-info">
+                    <h3>Da Vinci System</h3>
+                    <p>Ein hochpräziser OP-Roboter, mit dem Chirurgen kleinste Schnitte bei Operationen durchführen können, die für Menschenhände zu fein wären.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>⚙️ So funktioniert's</h2>
+        <p>Ein Roboter arbeitet meistens in drei Schritten:</p>
+        <ul>
+            <li><strong>Messen:</strong> Über Kameras oder Laser (Lidar) sieht er Hindernisse.</li>
+            <li><strong>Denken:</strong> Ein Computer-Gehirn berechnet den besten Weg.</li>
+            <li><strong>Handeln:</strong> Elektromotoren bewegen die Arme oder Beine des Roboters.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>⚖️ Pros & Contras</h2>
+        <table>
+            <tr>
+                <th>Aspekt</th>
+                <th class="pro">Vorteile (+)</th>
+                <th class="contra">Probleme (-)</th>
+            </tr>
+            <tr>
+                <td>Arbeit</td>
+                <td>Übernehmen gefährliche Jobs (Minen, Giftmüll).</td>
+                <td>Einfache Arbeitsplätze für Menschen fallen weg.</td>
+            </tr>
+            <tr>
+                <td>Präzision</td>
+                <td>Arbeiten 24/7 ohne müde zu werden oder Fehler zu machen.</td>
+                <td>Hohe Kosten in der Anschaffung und Wartung.</td>
+            </tr>
+            <tr>
+                <td>Ethik</td>
+                <td>Helfen Kranken und alten Menschen im Alltag.</td>
+                <td>Was passiert bei Unfällen? Wer haftet bei Softwarefehlern?</td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="sources">
+        <h2>📚 Quellen</h2>
+        <ul>
+            <li><a href="https://www.bostondynamics.com/products/spot" target="_blank">Boston Dynamics (Herstellerseite Spot)</a></li>
+            <li><a href="https://www.intuitive.com" target="_blank">Intuitive Surgical (Da Vinci System)</a></li>
+            <li>KI-Unterstützung: Gemini (Struktur & Code-Generierung)</li>
+        </ul>
+    </section>
+
+</div>
+
+<footer style="text-align: center; padding: 20px; opacity: 0.5;">
+    &copy; 2026 Robot-Future Page | Erstellt für dein Projekt
+</footer>
+
+</body>
+</html>
